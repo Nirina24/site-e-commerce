@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="ram.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo de commerce" class="logo">
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="INDEX 1.html"><span class="nav-icon fas fa-home"></span> Accueil</a></li>
+                <li><a href="apropos.html"><span class="nav-icon fas fa-info-circle"></span> A propos</a></li>
+                <li><a href="Produits.html" class="active"><span class="nav-icon fas fa-box"></span> Produits</a></li>
+                <li><a href="contact.html" ><span class="nav-icon fas fa-envelope"></span> Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Recherche un produit...">
+        <span class="search-icon">&#128269;</span>
+    </div>
+
+    <section class="products-container" id="product-list">
+        <div class="product" id="product-1" style="--order: 1;">
+            <h2>DDR2 </h2>
+            <img src="img/ddr2 1go.jpg" alt="Laptop">
+            <p>DDR2 1Go</p>
+            <p class="price">$1200</p>
+           <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR2</h2>
+            <img src="img/ddr2 2go.jpg" alt="Accessoire">
+            <p>DDR2 2Go</p>
+            <p class="price">Ar 70 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(2)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-3" style="--order: 3;">
+            <h2>DDR3</h2>
+            <img src="img/ddr3 2go.jpg" alt="Accessoire">
+            <p>DDR3 2Go 10 600</p>
+            <p class="price">Ar 50 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(3)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-1" style="--order: 1;">
+            <h2>DDR3</h2>
+            <img src="img/ddr3 4go.jpg" alt="Laptop">
+            <p>DDR3 4Go 10 600</p>
+            <p class="price">Ar 120 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(4)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR3</h2>
+            <img src="img/ddr3 8go.jpg" alt="Accessoire">
+            <p>DDR3 8Go 10 600</p>
+            <p class="price">Ar 240 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(5)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-3" style="--order: 3;">
+            <h2>DDR3L</h2>
+            <img src="img/ddr3l 2go.jpg" alt="Accessoire">
+            <p>DDR3L 2Go 12 800S</p>
+            <p class="price">Ar 50 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-3" style="--order: 3;">
+            <h2>DDR3L</h2>
+            <img src="img/ddr3l 4go.jpg" alt="Accessoire">
+            <p>DDR3L 4Go 12 800S</p>
+            <p class="price">Ar 120 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-1" style="--order: 1;">
+            <h2>DDR3L</h2>
+            <img src="img/ddr3l 8go.jpg" alt="Laptop">
+            <p>DDR3L 8Go 12 800S</p>
+            <p class="price">Ar 240 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR4</h2>
+            <img src="img/ddr4 4go.jpg" alt="Accessoire">
+            <p>DDR4 4Go 2 400</p>
+            <p class="price">140 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR4</h2>
+            <img src="img/ddr416go.jpg" alt="Accessoire">
+            <p>DDR4 8Go 2400</p>
+            <p class="price">Ar 250 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR4</h2>
+            <img src="img/ddr416go.jpg" alt="Accessoire">
+            <p>DDR4 16Go 2400</p>
+            <p class="price">Ar 500 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR4</h2>
+            <img src="img/ddr416go.jpg" alt="Accessoire">
+            <p>DDR4 4Go 2666</p>
+            <p class="price">Ar 140 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR4</h2>
+            <img src="img/ddr4 8Go2666.jpg" alt="Accessoire">
+            <p>DDR4 8Go 2666 </p>
+            <p class="price">Ar 250 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div>
+    
+        <div class="product" id="product-2" style="--order: 2;">
+            <h2>DDR4</h2>
+            <img src="img/ddr416go.jpg" alt="Accessoire">
+            <p>DDR4 16Go 2666 </p>
+            <p class="price">Ar 500 000</p>
+            <a href="Formulaire.html"><button onclick="addToCart(1)">Acheter</button></a> 
+        </div> 
+    </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-content">
+        <h1>SPECIO</h1>
+        <p>Ambanidia Antananarivo</p>
+        <p>+261 32 11 361 05</p>
+        <p><a href="mailto:specio@moov.mg">specio@moov.mg</a></p>
+        <div class="social-icons">
+            <a href="https://www.bing.com/ck/a?!&&p=a26b2d5469814e60JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5Ng&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=gmail+connexion&u=a1aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbD9obD1mciM6fjp0ZXh0PUFjY8OpZGV6IMOgIHZvdHJlIGJvw650ZSBkZSByw6ljZXB0aW9uIEdtYWls&ntb=1"><img src="images/gmail.png" alt="Mail"></a>
+            <a href="https://www.bing.com/ck/a?!&&p=10226ab42a47b0d6JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5OQ&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=facebook+connexion&u=a1aHR0cHM6Ly9mci1mci5mYWNlYm9vay5jb20v&ntb=1"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.bing.com/ck/a?!&&p=312823e7743781c8JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5MQ&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=insta&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8&ntb=1"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.bing.com/ck/a?!&&p=f922bfb749154653JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5MA&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=linkedin&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tLw&ntb=1"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+    <div class="footer-nav">
+        <p> © 2024. All Rights PNM</p>
+        <nav>
+            <a href="INDEX 1.html">Accueil</a>
+            <a href="Apropos.html">À propos</a>
+            <a href="Produits.html">Produits</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</footer>
+   <script src="ram.js"></script>
+</body>
+</html>

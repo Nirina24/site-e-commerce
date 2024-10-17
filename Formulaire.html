@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Formulaire.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo de commerce" class="logo">
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="INDEX 1.html"><span class="nav-icon fas fa-home"></span> Accueil</a></li>
+                <li><a href="apropos.html"><span class="nav-icon fas fa-info-circle"></span> A propos</a></li>
+                <li><a href="Produits.html"><span class="nav-icon fas fa-box"></span> Produits</a></li>
+                <li><a href="contact.html" class="active"><span class="nav-icon fas fa-envelope"></span> Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="form-container">
+        <h1>Formulaire d'Achat</h1>
+        <form id="purchase-form"  action="https://formspree.io/f/manyyenq"
+        method="POST">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom complet" aria-label="Nom">
+
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required placeholder="Votre adresse email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de téléphone (Mobile Money) :</label>
+                <input type="text" id="phone" name="phone" required placeholder="Votre numéro de téléphone">
+            </div>
+            <div class="form-group">
+                <label for="product">Produit :</label>
+                <select id="product" name="product">
+                                     <!-- ordinateur -->
+                                     <option value="ACER :3 000 000 Ar">ACER :3 000 000 Ar</option>
+                                     <option value="LENOVO :4 500 000 Ar">LENOVO :4 500 000 Ar</option>
+                                     <option value="HP :6 000 000 Ar">HP :6 000 000 Ar</option>
+                                     <option value="SAMSUNG :480.000 Ar">SAMSUNG :480.000 Ar</option>
+                                     <option value="ASUS :570.000 Ar">ASUS :570.000 Ar</option>
+                                     <option value="DELL :8.000.000 Ar">DELL :8.000.000 Ar</option>
+                                     <option value="VAIO :5.000.000 Ar ">VAIO :5.000.000 Ar </option>
+                                     <option value="LG :6.500.000 Ar">LG :6.500.000 Ar</option>
+                                     <option value="TOSHIBA :90.000.000 Ar">TOSHIBA :90.000.000 Ar</option>
+                                     <option value="COMPAQ :450.000.000 Ar">COMPAQ :450.000.000 Ar </option>
+                                     <option value="BENQ :70.000.000 Ar">BENQ :70.000.000 Ar</option>
+                                     <option value="PACKARD BELL :750.000.000 Ar">PACKARD BELL :750.000.000 Ar</option>
+                 
+                                     <!-- disques HDD -->
+                                     <option value="HDD EXT 1to TRANSCEND :370.000 Ar">HDD EXT 1to TRANSCEND :370.000 Ar</option>
+                                     <option value="HDD EXT 1to SEAGATE :300.000 Ar">HDD EXT 1to SEAGATE :300.000 Ar</option>
+                                     <option value="HDD EXT 1to LEXAR :450.000 Ar">HDD EXT 1to LEXAR :450.000 Ar</option>
+                                     <option value="HDD EXT 512Go LEXAR :270.00 Ar">HDD EXT 512Go LEXAR :270.00 Ar</option>
+                                     <option value="HDD 1to SEAGATE :250.000 Ar">HDD 1to SEAGATE :250.000 Ar</option>           
+                                     <option value="HDD 500Go SEAGATE :150.00 Ar">HDD 500Go SEAGATE :150.00 Ar</option>
+                                     <!-- DISQUES SSD -->
+                                     <option value="SSD 256Go LEXAR :120.000 Ar">SSD 256Go LEXAR :120.000 Ar</option>
+                                     <option value="SSD 1to LEXAR :320.000 Ar">SSD 1to LEXAR :320.000 Ar</option>
+                                     <option value="SSD 512Go LEXAR :200.000 Ar ">SSD 512Go LEXAR :200.000 Ar </option>
+                                     <!-- DISQUES NVME -->
+                                     <option value="NVME 256Go LEXAR :160.000 Ar">NVME 256Go LEXAR :160.000 Ar</option>
+                                     <option value="NVME 512Go LEXAR :250.000 Ar">NVME 512Go LEXAR :250.000 Ar</option>
+                                     <option value="NVME 1to LEXAR :350.000 Ar">NVME 1to LEXAR :350.000 Ar </option>
+                                     <!-- RAM -->
+                                     <option value="DDR2 1Go :$000000">DDR2 1Go :$000000</option>
+                                     <option value="DDR2 2Go :70 000 Ar">DDR2 2Go :70 000 Ar</option>
+                                     <option value="DDR3 2Go 10 600 :50 000Ar">DDR3 2Go 10 600 :50 000Ar</option>
+                                     <option value="DDR3 4Go 10 600 :120 000Ar">DDR3 4Go 10 600 :120 000Ar</option>
+                                     <option value="DDR3 8Go 10 600 :240 000 Ar">DDR3 8Go 10 600 :240 000 Ar</option>
+                                     <option value="DDR3L 2Go 12 800S :50 000 A">DDR3L 2Go 12 800S :50 000 Ar</option>
+                                     <option value="DDR3L 4Go 12 800S:120 000 Ar">DDR3L 4Go 12 800S:120 000 Ar</option>
+                                     <option value="DDR3L 8Go 12 800S :240 000 Ar">DDR3L 8Go 12 800S :240 000 Ar</option>
+                                     <option value="DDR4 4Go 2 400 :140 000 Ar">DDR4 4Go 2 400 :140 000 Ar</option>
+                                     <option value="DDR4 8Go 2 400 :250 000 Ar">DDR4 8Go 2 400 :250 000 Ar</option>
+                                     <option value="DDR4 16Go 2 400 :500 000 Ar">DDR4 16Go 2 400 :500 000 Ar</option>
+                                     <option value="DDR4 4Go 2 666 :140 000 Ar">DDR4 4Go 2 666 :140 000 Ar</option>
+                                     <option value="DDR4 8Go 2 666 :250 000 Ar">DDR4 8Go 2 666 :250 000 Ar</option>
+                                     <option value="DDR4 16Go 2 666 :500 000 Ar">DDR4 16Go 2 666 :500 000 Ar</option>
+                    <!-- Accessoires -->
+                    <option value="HDMI: Ar 30 000 ~ Ar 120 000">HDMI: Ar 30 000 ~ Ar 120 000</option>
+                    <option value="VGA: Ar 30 000 ~ Ar 50 000">VGA: Ar 30 000 ~ Ar 50 000</option>
+                    <option value="USB: Ar 20 000 ~ Ar 60 000">USB: Ar 20 000 ~ Ar 60 000</option>
+                    <option value="DISPLAY PORT: Ar 35 000 ~ Ar 40 000">DISPLAY PORT: Ar 35 000 ~ Ar 40 000</option>
+                    <option value="DOOKING: Ar 200 000">DOOKING: Ar 200 000</option>
+                    <option value="CABLE DE SECURITE: Ar 40 000">CABLE DE SECURITE: Ar 40 000</option>
+                    <option value="CLAVIER: Ar 35 000 ~ Ar 45 000">CLAVIER: Ar 35 000 ~ Ar 45 000</option>
+                    <option value="TYPE C RESEAU: Ar 60 000">TYPE C RESEAU: Ar 60 000</option>
+                    <option value="RACK: Ar 40 000 ~ Ar 50 000">RACK: Ar 40 000 ~ Ar 50 000</option>
+                    <option value="TAPIS SOURIS: Ar 20 000">TAPIS SOURIS: Ar 20 000</option>
+                    <option value="CAPTEUR WIFI: Ar 30 000 ~ Ar 50 000">CAPTEUR WIFI: Ar 30 000 ~ Ar 50 000</option>
+                    <option value="HOUSSE: Ar 40 000">HOUSSE: Ar 40 000</option>
+
+                    <!-- Pieces Laptops -->
+
+                    
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <button type="submit">Acheter Maintenant</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h1>Specio</h1>
+            <p>Ambanidia Antananarivo</p>
+            <p>+261 32 11 361 05</p>
+            <p><a href="mailto:specio@moov.mg">specio@moov.mg</a></p>
+            <div class="social-icons">
+                <a
+                    href="https://www.bing.com/ck/a?!&&p=a26b2d5469814e60JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5Ng&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=gmail+connexion&u=a1aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbD9obD1mciM6fjp0ZXh0PUFjY8OpZGV6IMOgIHZvdHJlIGJvw650ZSBkZSByw6ljZXB0aW9uIEdtYWls&ntb=1"><img
+                        src="images/gmail.png" alt="Mail"></a>
+                <a
+                    href="https://www.bing.com/ck/a?!&&p=10226ab42a47b0d6JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5OQ&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=facebook+connexion&u=a1aHR0cHM6Ly9mci1mci5mYWNlYm9vay5jb20v&ntb=1"><img
+                        src="images/facebook.png" alt="Facebook"></a>
+                <a
+                    href="https://www.bing.com/ck/a?!&&p=312823e7743781c8JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5MQ&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=insta&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8&ntb=1"><img
+                        src="images/instagram.png" alt="Instagram"></a>
+                <a
+                    href="https://www.bing.com/ck/a?!&&p=f922bfb749154653JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5MA&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=linkedin&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tLw&ntb=1"><img
+                        src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <p> © 2024. All Rights PNM</p>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="Apropos.html">À propos</a>
+                <a href="Produits.html">Produits</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+
+    <script src="Formualaire.js"></script>
+</body>
+
+</html>

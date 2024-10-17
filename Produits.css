@@ -1,0 +1,612 @@
+body ,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #008080;
+  
+}
+
+
+
+header {
+    background-color: #000080;
+    padding: 15px;
+    top: 0;
+    z-index: 1000;
+   display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: sticky;
+   
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style de base pour le logo */
+.logo {
+    width: 120px;
+    max-width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out; /* Ajoute une transition fluide */
+    margin-top: 10px;
+}
+
+.logo-container{
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Effet hover pour le logo */
+.logo:hover {
+    transform: scale(1.1); /* Agrandit légèrement le logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
+    filter: brightness(1.2); /* Augmente la luminosité du logo */
+}
+
+nav ul {
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Les éléments seront alignés horizontalement */
+    margin-right: 100px;
+    margin-top: 5px;
+}
+
+nav ul li {
+  
+    margin-top: 30px;
+    margin-right: 80px; /* Ajoute un espace de 20px entre les éléments */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li:last-child {
+    margin-right: 0; /* Supprime la marge droite pour le dernier élément */
+}
+
+nav ul li a.active, nav ul li a:hover {
+    border-bottom: 3px solid red;
+    padding: 0.5px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        margin-top: -10px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: #fff;
+        margin-top: -50px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start; /* Aligne les éléments au début de l'en-tête */
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Place les éléments de navigation en colonne */
+        align-items: flex-start; /* Aligne les liens sur la gauche */
+        gap: 15px; /* Réduit l'espace entre les éléments */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 120px; /* Réduit la taille du logo sur les écrans plus petits */
+    }
+
+    nav ul {
+        gap: 10px; /* Réduit encore l'espace entre les éléments de navigation */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Réduit la taille du texte pour les petits écrans */
+    }
+}
+/* Search Container */
+/* .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 50px;
+    background-color: #ccc;
+    width: 400px;
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    color: white;
+}
+#search-results {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.result-item img {
+    margin-right: 15px;
+}
+/*  */
+/* .result-item h3 {
+    margin: 0 0 5px 0;
+}
+
+.result-item p {
+    margin: 0;
+} */ 
+/* Style pour le conteneur de la barre de recherche */
+
+
+/* Style pour centrer la barre de recherche verticalement et horizontalement */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 50px;
+    background-color: #ccc;
+    width: 400px;
+    position: relative;
+    z-index: 5; /* S'assurer que la barre de recherche est au-dessus du body */
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Style pour le bouton de recherche */
+.search-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour l'icône de recherche */
+.search-icon {
+    font-size: 18px;
+}
+
+/* Effet lors du survol du bouton de recherche */
+.search-button:hover {
+    background-color: #218838;
+}
+
+/* Effet lorsque l'utilisateur clique dans la barre de recherche */
+#search-input:focus {
+    border-color: #28a745;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+    #search-input {
+        width: 80%;
+    }
+}
+
+/* Style du conteneur de produits */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Style de chaque produit */
+.product {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation au survol de chaque produit */
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du produit */
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Titre du produit */
+.product h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Détails du produit */
+.product p {
+    margin: 5px 0;
+    color: black;
+}
+/* Button Container */
+.button-container {
+    display: flex;
+    gap: 20px;
+  margin-left: -20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn-3d {
+    background-color: #04e556cf;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 110px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn-3d:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.6);
+}
+
+.btn-3d:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 300px;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Buy Button */
+.buy-button {
+    background: linear-gradient(145deg, #01e856c1, #04e556cf);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #a3a3a3, -5px -5px 15px #ffffff;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+    box-shadow: 2px 2px 10px #a3a3a3, -2px -2px 10px #ffffff;
+    transform: translateY(-3px);
+}
+
+.buy-button:active {
+    box-shadow: inset 5px 5px 10px #a3a3a3, inset -5px -5px 10px #ffffff;
+    transform: translateY(2px);
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        width: 90%; /* Réduit la largeur du conteneur de recherche */
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px; /* Réduit l'espace entre les boutons */
+        align-items: center;
+    }
+
+    .btn-3d {
+        margin-left: 0;
+    }
+
+    .product-container {
+        justify-content: center; /* Recentre les cartes produits */
+    }
+
+    .product-card {
+        width: 90%; /* Réduit la taille des cartes produits */
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav p {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-nav nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-nav nav a {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        width: 100%;
+    }
+
+    #search-input {
+        font-size: 14px; /* Diminue la taille du texte */
+    }
+
+    .btn-3d {
+        font-size: 16px;
+        padding: 10px 20px; /* Réduit la taille du bouton */
+    }
+
+    .buy-button {
+        font-size: 16px; /* Réduit la taille de la police du bouton */
+        padding: 10px 20px; /* Réduit la taille du bouton */
+    }
+
+    .footer-content h1 {
+        font-size: 24px; /* Réduit la taille du texte du footer */
+    }
+
+    .footer-content p,
+    .footer-nav p {
+        font-size: 12px; /* Réduit la taille de la police */
+    }
+}
+
+
+
+/* style de footer */
+footer {
+    background-color: #000080;
+    padding: 10px; /* Réduire la hauteur en diminuant le padding */
+    margin-top: 40px; /* Vous pouvez aussi ajuster cette valeur */
+    color: white;
+    text-align: center;
+}
+
+.footer-content h1 {
+    color: red;
+    font-size: 28px; /* Réduire la taille de police peut aider à réduire la hauteur */
+    margin: 5px 0; /* Ajouter des marges pour contrôler l'espacement */
+}
+
+.footer-content p {
+    font-size: 14px; /* Diminuer la taille de la police pour réduire la hauteur */
+    margin: 3px 0; /* Réduire la marge verticale */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px 3px; /* Réduire la marge entre les icônes sociales */
+}
+
+.social-icons img {
+    width: 25px; /* Diminuer la taille des icônes sociales */
+    height: 25px;
+}
+
+.footer-nav {
+    padding: 5px 0; /* Réduire le padding pour diminuer la hauteur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav p {
+    margin-left: 40px; /* Réduire la marge pour économiser de l'espace */
+    color: #fff;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a {
+    color: #fff;
+    margin-right: 30px; /* Réduire l'espace entre les liens */
+    text-decoration: none;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a:hover {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Responsive styles for footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px;
+    }
+
+    .footer-content h1 {
+        font-size: 24px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav p {
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .footer-nav nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .footer-nav nav a {
+        margin: 5px 8px;
+        font-size: 12px;
+    }
+}

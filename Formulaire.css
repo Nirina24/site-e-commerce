@@ -1,0 +1,511 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #008080;
+    
+}
+
+header {
+    background-color: #000080;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style de base pour le logo */
+.logo {
+    width: 150px;
+    margin-left: 50px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out; /* Ajoute une transition fluide */
+}
+
+/* Effet hover pour le logo */
+.logo:hover {
+    transform: scale(1.1); /* Agrandit légèrement le logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
+    filter: brightness(1.2); /* Augmente la luminosité du logo */
+}
+
+
+nav ul {
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Les éléments seront alignés horizontalement */
+    margin-right: 100px;
+}
+
+nav ul li {
+  
+    margin-right: 80px; /* Ajoute un espace de 20px entre les éléments */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li:last-child {
+    margin-right: 0; /* Supprime la marge droite pour le dernier élément */
+}
+
+nav ul li a.active, nav ul li a:hover {
+    border-bottom: 3px solid red;
+    padding: 0.5px;
+}
+
+
+.form-container {
+    background-color: #006666;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 40%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button{
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 20%;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation au survol du bouton */
+button:hover {
+    background-color: #28a745;
+    transform: scale(1.1); /* Agrandit le bouton au survol */
+}
+
+
+footer {
+    background-color: #000080;
+    padding: 10px; /* Réduire la hauteur en diminuant le padding */
+    margin-top: 40px; /* Vous pouvez aussi ajuster cette valeur */
+    color: white;
+    text-align: center;
+}
+
+.footer-content h1 {
+    color: red;
+    font-size: 28px; /* Réduire la taille de police peut aider à réduire la hauteur */
+    margin: 5px 0; /* Ajouter des marges pour contrôler l'espacement */
+}
+
+.footer-content p {
+    font-size: 14px; /* Diminuer la taille de la police pour réduire la hauteur */
+    margin: 3px 0; /* Réduire la marge verticale */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px 3px; /* Réduire la marge entre les icônes sociales */
+}
+
+.social-icons img {
+    width: 25px; /* Diminuer la taille des icônes sociales */
+    height: 25px;
+}
+
+.footer-nav {
+    padding: 5px 0; /* Réduire le padding pour diminuer la hauteur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav p {
+    margin-left: 40px; /* Réduire la marge pour économiser de l'espace */
+    color: #fff;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a {
+    color: #fff;
+    margin-right: 30px; /* Réduire l'espace entre les liens */
+    text-decoration: none;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a:hover {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+/* Style général du site */
+
+html,body{
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #008080; /* Couleur claire pour contraster avec le logo */
+    display: flex;
+    flex-direction: column;
+   /*  justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+} */
+
+
+
+header {
+    background-color: #000080;
+    padding: 15px;
+    top: 0;
+    z-index: 1000;
+   display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: sticky;
+   
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style de base pour le logo */
+.logo {
+    width: 120px;
+    max-width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out; /* Ajoute une transition fluide */
+    margin-top: 10px;
+}
+
+.logo-container{
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Effet hover pour le logo */
+.logo:hover {
+    transform: scale(1.1); /* Agrandit légèrement le logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
+    filter: brightness(1.2); /* Augmente la luminosité du logo */
+}
+
+nav ul {
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Les éléments seront alignés horizontalement */
+    margin-right: 100px;
+    margin-top: 5px;
+}
+
+nav ul li {
+  
+    margin-top: 30px;
+    margin-right: 80px; /* Ajoute un espace de 20px entre les éléments */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li:last-child {
+    margin-right: 0; /* Supprime la marge droite pour le dernier élément */
+}
+
+nav ul li a.active, nav ul li a:hover {
+    border-bottom: 3px solid red;
+    padding: 0.5px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        margin-top: -10px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: #fff;
+        margin-top: -50px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+}
+
+.form-container {
+    background-color: #006666;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 40%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button{
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 20%;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation au survol du bouton */
+button:hover {
+    background-color: #28a745;
+    transform: scale(1.1); /* Agrandit le bouton au survol */
+}
+
+footer {
+    background-color: #000080;
+    padding: 10px; /* Réduire la hauteur en diminuant le padding */
+    margin-top: 40px; /* Vous pouvez aussi ajuster cette valeur */
+    color: white;
+    text-align: center;
+}
+
+.footer-content h1 {
+    color: red;
+    font-size: 28px; /* Réduire la taille de police peut aider à réduire la hauteur */
+    margin: 5px 0; /* Ajouter des marges pour contrôler l'espacement */
+}
+
+.footer-content p {
+    font-size: 14px; /* Diminuer la taille de la police pour réduire la hauteur */
+    margin: 3px 0; /* Réduire la marge verticale */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px 3px; /* Réduire la marge entre les icônes sociales */
+}
+
+.social-icons img {
+    width: 25px; /* Diminuer la taille des icônes sociales */
+    height: 25px;
+}
+
+.footer-nav {
+    padding: 5px 0; /* Réduire le padding pour diminuer la hauteur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav p {
+    margin-left: 40px; /* Réduire la marge pour économiser de l'espace */
+    color: #fff;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a {
+    color: #fff;
+    margin-right: 30px; /* Réduire l'espace entre les liens */
+    text-decoration: none;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a:hover {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive styles for body and footer */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .form-container {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+
+    .footer-content h1 {
+        font-size: 24px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav p {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-nav nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-nav nav a {
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .footer-content h1 {
+        font-size: 20px;
+    }
+
+    .footer-nav nav a {
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,551 @@
+body ,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #008080;
+    font-family: Arial, sans-serif;
+  
+}
+
+
+
+header {
+    background-color: #000080;
+    padding: 15px;
+    top: 0;
+    z-index: 1000;
+   display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: sticky;
+   
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style de base pour le logo */
+.logo {
+    width: 120px;
+    max-width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out; /* Ajoute une transition fluide */
+    margin-top: 10px;
+}
+
+.logo-container{
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Effet hover pour le logo */
+.logo:hover {
+    transform: scale(1.1); /* Agrandit légèrement le logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
+    filter: brightness(1.2); /* Augmente la luminosité du logo */
+}
+
+nav ul {
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Les éléments seront alignés horizontalement */
+    margin-right: 100px;
+    margin-top: 5px;
+}
+
+nav ul li {
+  
+    margin-top: 30px;
+    margin-right: 80px; /* Ajoute un espace de 20px entre les éléments */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li:last-child {
+    margin-right: 0; /* Supprime la marge droite pour le dernier élément */
+}
+
+nav ul li a.active, nav ul li a:hover {
+    border-bottom: 3px solid red;
+    padding: 0.5px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        margin-top: -10px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: #fff;
+        margin-top: -50px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+
+/* Recherche Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 50px;
+    background-color: #ccc;
+    width: 400px;
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Centred Title */
+.centered-title {
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Star */
+.star {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* Apropos */
+.apropos {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: inline-block;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+/* Stars */
+.stars {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+/* Heading */
+h1 {
+    font-size: 32px;
+    margin-top: 50px;
+    color: red;
+}
+
+/* Specio */
+.specio {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.specio h2 {
+    color: red;
+    font-size: 36px;
+}
+
+.specio p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Activités */
+.activites {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.activites h2 {
+    color: red;
+    font-size: 32px;
+}
+
+/* Grid Activités */
+.activities-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.activity {
+    text-align: center;
+    width: 200px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+.activity:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.activity:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.activity:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.activity img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.activity p {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.activity:hover img {
+    transform: scale(1.1);
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: #333;
+    color: aqua;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    flex-wrap: wrap;
+}
+
+.stat {
+    transition: transform 0.3s;
+}
+
+.stat:hover {
+    transform: scale(1.1);
+}
+
+.stat h3 {
+    font-size: 48px;
+    margin: 0;
+    animation: countFade 1.5s ease-in-out;
+}
+.animated-logo {
+    width: 400px; /* Vous pouvez ajuster la taille */
+    transition: transform 0.5s ease-in-out;
+    animation: bounce 2s infinite;
+    border-radius: 10px;
+  }
+  
+  .animated-logo:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+.stat p {
+    font-size: 16px;
+    margin: 5px 0 0 0;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+
+/* Medium Screens (tablettes) */
+@media (max-width: 768px) {
+    .search-container {
+        width: 300px;
+    }
+
+    .search-bar input {
+        width: 150px;
+    }
+
+    .activities-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .stat h3 {
+        font-size: 36px;
+    }
+
+    .specio h2, .activites h2 {
+        font-size: 28px;
+    }
+}
+
+/* Small Screens (mobiles) */
+@media (max-width: 480px) {
+    .search-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 5px;
+    }
+
+    #search-input {
+        padding: 8px 30px 8px 15px;
+        font-size: 14px;
+    }
+
+    .centered-title {
+        font-size: 1.5em;
+    }
+
+    .star {
+        width: 20px;
+        height: 20px;
+    }
+
+    .specio p, .activity p, .stat p {
+        font-size: 14px;
+    }
+
+    .specio h2, .activites h2, h1 {
+        font-size: 24px;
+    }
+
+    .activity {
+        width: 100%;
+    }
+
+    .stat h3 {
+        font-size: 28px;
+    }
+
+    .stats {
+        padding: 10px;
+    }
+}
+
+
+
+/* style de footer */
+footer {
+    background-color: #000080;
+    padding: 10px; /* Réduire la hauteur en diminuant le padding */
+    margin-top: 40px; /* Vous pouvez aussi ajuster cette valeur */
+    color: white;
+    text-align: center;
+}
+
+.footer-content h1 {
+    color: red;
+    font-size: 28px; /* Réduire la taille de police peut aider à réduire la hauteur */
+    margin: 5px 0; /* Ajouter des marges pour contrôler l'espacement */
+}
+
+.footer-content p {
+    font-size: 14px; /* Diminuer la taille de la police pour réduire la hauteur */
+    margin: 3px 0; /* Réduire la marge verticale */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px 3px; /* Réduire la marge entre les icônes sociales */
+}
+
+.social-icons img {
+    width: 25px; /* Diminuer la taille des icônes sociales */
+    height: 25px;
+}
+
+.footer-nav {
+    padding: 5px 0; /* Réduire le padding pour diminuer la hauteur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav p {
+    margin-left: 40px; /* Réduire la marge pour économiser de l'espace */
+    color: #fff;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a {
+    color: #fff;
+    margin-right: 30px; /* Réduire l'espace entre les liens */
+    text-decoration: none;
+    font-size: 14px; /* Réduire la taille de la police */
+}
+
+.footer-nav nav a:hover {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Responsive styles for footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px;
+    }
+
+    .footer-content h1 {
+        font-size: 24px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav p {
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .footer-nav nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .footer-nav nav a {
+        margin: 5px 8px;
+        font-size: 12px;
+    }
+}
+
+
+

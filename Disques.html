@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Disques.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo de commerce" class="logo">
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="INDEX 1.html" ><span class="nav-icon fas fa-home"></span> Accueil</a></li>
+                <li><a href="apropos.html"><span class="nav-icon fas fa-info-circle"></span> A propos</a></li>
+                <li><a href="Produits.html" class="active"><span class="nav-icon fas fa-box"></span> Produits</a></li>
+                <li><a href="contact.html" ><span class="nav-icon fas fa-envelope"></span> Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Recherche un produit...">
+        <span class="search-icon">&#128269;</span>
+    </div>
+
+   <!-- Conteneur principal -->
+   <div class="container">
+    <div class="top-carrousels">
+        <!-- Carrousel 1 -->
+        <div class="carrousel-container">
+            <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+            <div class="carrousel">
+                <div class="carrousel-item" data-name="HDD EXT 1to TRANSCEND">
+                    <img src="images/transc.png" alt="Produit 1">
+                    <h3>HDD EXT</h3>
+                    <p>1to TRANSCEND</p>
+                    <h2>300.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+                <div class="carrousel-item" data-name="HDD EXT 1to SEAGATE">
+                    <img src="images/seagate.png" alt="Produit 2">
+                    <h3>HDD EXT</h3>
+                    <p>1to SEAGATE</p>
+                    <h2>300.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+                <div class="carrousel-item" data-name="HDD EXT 1to LEXAR">
+                    <img src="images/lexarss.png" alt="Produit 3">
+                    <h3>HDD EXT</h3>
+                    <p>1to LEXAR</p>
+                    <h2>450.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+            </div>
+            <button class="next" onclick="nextSlide(0)">&#10095;</button>
+        </div>
+
+        <!-- Carrousel 2 -->
+        <div class="carrousel-container">
+            <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+            <div class="carrousel">
+                <div class="carrousel-item" data-name="SSD 256Go LEXAR">
+                    <img src="images/SSD.png" alt="Produit 4">
+                    <h3>SSD</h3>
+                    <p>256Go LEXAR</p>
+                    <h2>120.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+                <div class="carrousel-item" data-name="SSD 1to LEXAR">
+                    <img src="images/SSD 1TO.png" alt="Produit 5">
+                    <h3>SSD</h3>
+                    <p>1to LEXAR</p>
+                    <h2>320.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+                <div class="carrousel-item" data-name="SSD 512Go LEXAR">
+                    <img src="images/512GO.png" alt="Produit 6">
+                    <h3>SSD</h3>
+                    <p>512Go LEXAR</p>
+                    <h2>200.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+            </div>
+            <button class="next" onclick="nextSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Carrousel 3 (en bas, au milieu) -->
+    <div class="bottom-carrousel">
+        <div class="carrousel-container">
+            <button class="prev" onclick="prevSlide(2)">&#10094;</button>
+            <div class="carrousel">
+                <div class="carrousel-item" data-name="NVME 256Go LEXAR">
+                    <img src="images/NVMEEE.png" alt="Produit 5">
+                    <h3>NVME</h3>
+                    <p>256Go LEXAR</p>
+                    <h2>160.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+                <div class="carrousel-item" data-name="NVME 512Go LEXAR">
+                    <img src="images/NVME3.png" alt="Produit 6">
+                    <h3>NVME</h3>
+                    <p>512Go LEXAR</p>
+                    <h2>250.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+                <div class="carrousel-item" data-name="NVME 1to LEXAR">
+                    <img src="images/NVME4.png" alt="Produit 7">
+                    <h3>NVME</h3>
+                    <p>1to LEXAR</p>
+                    <h2>350.000 Ar</h2>
+                    <a href="Formulaire.html"><button>Acheter</button></a>
+                </div>
+            </div>
+            <button class="next" onclick="nextSlide(2)">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+   
+      <!-- footer -->
+      <footer>
+        <div class="footer-content">
+            <h1>SPECIO</h1>
+            <p>Ambanidia Antananarivo</p>
+            <p>+261 32 11 361 05</p>
+            <p><a href="mailto:specio@moov.mg">specio@moov.mg</a></p>
+            <div class="social-icons">
+                <a href="https://www.bing.com/ck/a?!&&p=a26b2d5469814e60JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5Ng&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=gmail+connexion&u=a1aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbD9obD1mciM6fjp0ZXh0PUFjY8OpZGV6IMOgIHZvdHJlIGJvw650ZSBkZSByw6ljZXB0aW9uIEdtYWls&ntb=1"><img src="images/gmail.png" alt="Mail"></a>
+                <a href="https://www.bing.com/ck/a?!&&p=10226ab42a47b0d6JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5OQ&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=facebook+connexion&u=a1aHR0cHM6Ly9mci1mci5mYWNlYm9vay5jb20v&ntb=1"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.bing.com/ck/a?!&&p=312823e7743781c8JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5MQ&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=insta&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8&ntb=1"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.bing.com/ck/a?!&&p=f922bfb749154653JmltdHM9MTcyNzM5NTIwMCZpZ3VpZD0zY2Y2MGEwZC1hZmM1LTYxZDQtMjBiYy0xZjA5YWVlNjYwNDImaW5zaWQ9NTE5MA&ptn=3&ver=2&hsh=3&fclid=3cf60a0d-afc5-61d4-20bc-1f09aee66042&psq=linkedin&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tLw&ntb=1"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <p> © 2024. All Rights PNM</p>
+            <nav>
+                <a href="INDEX 1.html">Accueil</a>
+                <a href="Apropos.html">À propos</a>
+                <a href="Produits.html">Produits</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="disques.js"></script> 
+</body>
+</html>

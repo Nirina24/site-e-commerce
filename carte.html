@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessoire</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="carte.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="imge/logo.png" alt="Logo de commerce" class="logo">
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html"><span class="nav-icon fas fa-home"></span> Accueil</a></li>
+                <li><a href="/apropos.html"><span class="nav-icon fas fa-info-circle"></span> A propos</a></li>
+                <li><a href="/Produits.html" class="active"><span class="nav-icon fas fa-box"></span> Produits</a></li>
+                <li><a href="/contact.html"><span class="nav-icon fas fa-envelope"></span> Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Recherche un produit...">
+      <span class="search-icon">&#128269;</span>
+  </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+<div id="product-list">
+  <div class="product">
+      <img src="imge/hdmi.png" alt="HDMI">
+      <h3>HDMI</h3>
+      <p>Prix:Ar3 0 000 ~ Ar 120 000 </p>
+      <a href="/Formulaire.html"><button class="buy-button">Acheter</button></a>
+  </div>
+  <div class="product">
+      <img src="imge/vga.png" alt="VGA">
+      <h3>VGA</h3>
+      <p>Prix:Ar 30 000 ~ Ar 50 000</p>
+      <a href="/Formulaire.html"><button class="buy-button">Acheter</button></a>
+  </div>
+  <div class="product">
+      <img src="imge/usb.png" alt="USB">
+      <h3>USB</h3>
+      <p>Prix:Ar 20 000 ~ Ar 60 000 </p>
+      <a href="/Formulaire.html"><button class="buy-button">Acheter</button></a>
+
+  </div> 
+</div>
+
+
+  <footer>
+    <div class="footer-content">
+        <h1>SPECIO</h1>
+        <p>Ambanidia Antananarivo</p>
+        <p>+261 32 11 361 05</p>
+        <p><a href="mailto:specio@moov.mg">specio@moov.mg</a></p>
+        <div class="social-icons">
+            <a href="#"><img src="imge/gmail.png" alt="Mail"></a>
+            <a href="#"><img src="imge/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="imge/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="imge/linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+    <div class="footer-nav">
+        <p> © 2024. All Rights PNM</p>
+        <nav>
+            <a href="/index.html">Accueil</a>
+            <a href="/Apropos.html">À propos</a>
+            <a href="/Produits.html">Produits</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+    <script src="carte.js"></script>
+</footer>
+</body>
+</html>
